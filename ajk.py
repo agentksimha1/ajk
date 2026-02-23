@@ -7,8 +7,8 @@ from datetime import datetime
 # -------------------------------
 # Load Models
 # -------------------------------
-gbn_model = joblib.load(r"C:\Users\Krishna\Downloads\gbn_model.pkl")
-rf_model = joblib.load(r"C:\Users\Krishna\Downloads\rf_model.pkl")
+gbn_model = joblib.load(r"gbn_model.pkl")
+rf_model = joblib.load(r"rf_model.pkl")
 
 # -------------------------------
 # Reason Mapping
@@ -56,4 +56,5 @@ if st.button("Predict"):
     st.subheader("Prediction Results")
     st.write(f"Days since Jan 13, 2026: {days_since_start}")
     st.write(f"Predicted Reason: {predicted_reason}")
+
     st.write(f"Predicted Minutes Late: {round(predicted_minutes, 2)} minutes")
